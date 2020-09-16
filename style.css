@@ -1,0 +1,671 @@
+*{
+    padding: 0;
+    
+    margin: 0; 
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+body{
+    background-color: black;
+    scroll-padding-top: 50px;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background-size: auto;
+    background-attachment: fixed;
+    position: fixed;
+    overflow: hidden;
+    border-radius: 0 0 0 0;
+    z-index: 2;
+
+}
+
+header .headOver{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: whitesmoke;
+    background: linear-gradient( 145deg, #3778c2   30%,#32064A 60% );
+}
+
+
+/*The Hambuger style and animation */
+.container{
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 20% 20% 20% 20%;
+    padding: 2px;
+    z-index: 1;
+
+}
+.patty1, .patty2, .patty3{
+    background-color: #e5eaf5;
+    width: 35px;
+    height: 5px;
+    margin: 5px 0;
+    transition: all 500ms ease-in-out;
+    border-radius: 20% 20% 20% 20%;
+}
+
+.container:hover{
+    outline: solid;-moz-outline-radius: 10px;
+    outline-width: 2px;
+}
+.pattyRotate .patty1{
+    
+    transform: translate(0,10px)rotate(-45deg);
+}.pattyRotate .patty3{
+    transform: translate(0,-10px)rotate(45deg);
+}.pattyRotate .patty2{
+    opacity: 0;
+}
+/*The End of Hambuger style and animation................................................................................................................... */
+
+
+
+.imgOverlay{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding-left: 60px;
+
+}
+
+
+/*This is the sidebarMenu where it is a quick link to important information to guide you to like my contact details*/
+.sidebar .tooltipright::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;
+  } 
+
+  .sidebar .tooltipright {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    top: 15px;
+    right: 100%;
+  }
+  .sidebar a:hover .tooltipright {
+    visibility: visible;
+  }
+  .sidebar .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    left: -50%;
+  }
+  
+  .sidebar .tooltiptext::after {
+    content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  }
+  .sidebar a:hover .tooltiptext {
+    visibility: visible;
+  }
+  .sidebar {
+    width: 500px;
+    position: fixed;
+    height: 500px; 
+    z-index: 1;
+    top: -200px;
+    left: -250px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 250px;
+    transition: all 500ms ease-in-out;
+    vertical-align: center;
+    background: linear-gradient( 200deg, #3778c2   30%,#32064A 100% );
+    border-radius: 50%;/*topleft, .,.,bottomleft*/
+    transform: rotate(-90deg);
+    
+    opacity: 0;
+}
+  
+
+.sidebar a {
+    text-decoration: none;
+    text-align: center; 
+    font-size: 25px;
+    color: white;
+    display: block;
+    background-color: #0f2557;
+    border-radius: 100%;
+
+    height: 60px;
+    width: 60px;
+    transition: all 200ms ease-in-out;
+}
+
+.sidebar a:nth-child(1){
+    transform: translate3d(170px,5px,0)
+}.sidebar a:nth-child(2){
+    transform: translate3d(140px,15px,0)
+}.sidebar a:nth-child(3){
+    transform: translate3d(90px,15px,0)
+}.sidebar a:nth-child(4){
+    transform: translate3d(15px,-15px,0)
+}
+
+.sideNavAnim{
+    transform:   scale3d(1,1,1);
+    opacity: 100;
+    
+  }
+.sideNavAnim1{ 
+    transform: translate(-100%, 0);
+    
+}
+.sidebarItems li{
+    transition: all 500ms ease-in-out;
+    transform: translate(-100%, 0);
+    opacity: 0;margin: 0px 0px;
+    width: 20px;
+}
+
+.sidebar a:hover {
+    background-color: #28559a;
+}
+
+/*The End of Sidebar style....................................................................................................................................................*/ 
+
+
+
+/*This is my top profile style with photo and specialties*/
+.imageProfile{
+    background-image: url("img/Untitled-9.png");
+
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: safe;
+    padding: 60px;
+    padding-top: 110px;
+    flex-wrap: wrap;
+}
+.shapeText{
+    background: linear-gradient( 200deg, #32064A 30%, #150734 100% );
+    width: 530px;
+    height: 550px;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: left;
+    
+    flex-wrap: wrap;
+    border-left: 1px solid #474747;border-top: 1px solid #474747;
+    margin-left: 200px;
+
+}
+.textOverlay
+{
+    background: #0f0f0f;
+    width: 480px;
+    height: 500px;
+
+
+
+
+
+}
+
+ /*The End of profile style..............................................................................................................................................*/
+
+ /*Inbetween banners*/
+ .bannerDiv{
+    font-family: 'Lato', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    font-style: italic;
+
+    text-align: center;
+    
+    letter-spacing: 2px;
+    height: 70px;
+    width: 100%;
+     
+    color: white;
+    background: linear-gradient( 145deg, #32064A 30%, #3778c2 100% );
+
+    padding-top: 10px;
+    border-bottom: solid darkgrey 1px;
+    border-top: solid darkgrey 1px;
+ }
+
+ /*the banner End...............................................................................................................................................................*/ 
+
+ /*Specialities*/
+.slidercontent{
+    border-radius: 5% 0 0 5%;
+    height: 250px;
+    width: 400px;
+    background: linear-gradient( 200deg, #3778c2   30%,#32064A 100% );
+    box-shadow: 10px 10px 8px 4px  black;  
+}.programcontainer {
+    width:400px; height: 250px; background-color: white;overflow: hidden;
+    border-radius: 0 5% 5% 0;
+    box-shadow: 10px 10px 8px 4px black;
+   
+}
+.captop{
+    font-size: 16px;
+
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    
+}.capbot{
+    display: block;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    width: 80%;
+    
+    padding-top: 10px;
+    
+    color: white;
+    
+}.headimage{
+    width: 220px;
+    height: 180px;
+    background-color: transparent;
+    background-size: 100% 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+.containRight{
+    display: flex;
+    justify-content: right;
+    padding: 20px;
+}
+.containLeft{
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}
+.headtextContainer{
+    width: 100%;
+    height: auto;
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    padding: 3%;
+
+    display: flex;
+    justify-content: center;
+}
+.datetextContainer{
+    width: 100%;
+    height: auto;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: left;
+    padding-left: 3px;
+}.bodytextContainer{
+    width: 100%;
+    height: auto;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+
+    text-align: justify;
+
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+
+}
+
+.skillsrating{
+    background-image: url("img/mygames.png");
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+
+}
+ /*THE END Specialities..........................................................................................................................................*/
+
+
+ /*Education details*/
+ .edu{
+    
+    background-image: url("img/education.png");
+    width: 100%;
+
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    
+    flex-wrap: wrap;
+
+}
+
+.eduContent{
+    background-color: white;
+    width: 350px;
+    height: 500px;
+
+    border-radius: 20px;
+
+    box-shadow: 10px 15px 20px 4px black;
+}
+.edubotContent{
+
+    width: 100%;
+    height: 220px;
+
+    
+
+}.edutopContent{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+
+    text-align: justify;
+
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 50%;
+    background: linear-gradient( 200deg, #32064A 30%, #150734 100% );
+    border-radius: 20px 20px 200px 200px;
+}
+ /*THE END Education details........................................................................................................................................................................*/
+
+
+/*get in Contact*/ 
+.getContact{
+    display: inline-flex;
+    flex-basis: auto;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: 400px;
+    padding-top: 0%;
+
+}.photoArea{
+    height: 100%;
+    width: 15%;
+    background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
+    transform: skew(-20deg) translate(-100px,0);
+
+    animation: pulse2 20s infinite;
+
+}.detailArea{
+    height: 100%;
+    width: 20%;
+
+}.contactAnimation{
+    height: 100%;
+    width: 65%;
+
+    overflow: hidden;
+}.shape{
+    transform: skew(-20deg);
+    width: 100%;
+    height: 100%;
+    animation: pulse 20s infinite;
+    background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
+    transform: skew(-20deg) translate(100px,0) scale(1);
+
+}
+/*@keyframes pulse {
+    0% {
+        background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
+        transform: skew(-20deg) translate(100px,0);
+      }
+      50%{
+        background: linear-gradient( 80deg, #150734 10%, #32064A 100% );
+        transform: skew(20deg) translate(100px,0) scale(1);
+      }
+      100% {
+        background: linear-gradient( 100deg, #150734 10%, #32064A 100% );
+        transform: skew(-20deg) translate(100px,0);
+      }
+}@keyframes pulse2 {
+    0% {
+        background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
+        transform: skew(-20deg) translate(-100px,0);
+      }
+      50%{
+        background: linear-gradient( 80deg, #150734 10%, #32064A 100% );
+        transform: skew(20deg) translate(-100px,0) scale(1);
+      }
+      100% {
+        background: linear-gradient( 100deg, #150734 10%, #32064A 100% );
+        transform: skew(-20deg) translate(-100px,0);
+      }
+}*/
+/*THE END get in Contact.........................................................................................................................................................................*/
+
+
+
+/*Icons For buttons*/
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 60px;
+
+    text-align: center;
+    text-decoration: none;
+}
+  
+.fa:hover {
+    
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}.fa-instagram {
+    background: purple;
+    color: white;
+}.fa-discord {
+    background: #7289da;
+    color: white;
+}
+/*The END Of Icons...............................................................................................................................................*/
+
+/*THE Detail*/
+
+
+.containerPersonal{
+    display: inline-flex;
+    flex-basis: auto;
+    background: linear-gradient( 200deg, #3778c2   30%,#32064A 100% ); ;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+    
+    
+}.containerPD{
+    width: 550px;
+    height: 300px;
+    border-radius: 2px;
+    background: #150734;
+    
+    
+
+}.textDetails{
+   
+    width: 100%;
+
+}
+.detailShape{
+    width: 580px;
+    height: 330px;
+
+    background: linear-gradient( 200deg, #32064A 30%, #150734 100% );
+    display: flex;
+    
+    justify-content: flex-end;
+    align-items: flex-end;
+
+
+}
+.personalDetails{
+    border: black solid 2px;
+    
+}
+ 
+
+/*---------------------------------------------------------------------Styles for the Hobbies Page-------------------------------------------------------------------*/
+.headBGHobbies{
+    width: 100%;
+    height: 500px;
+    background: url("img/OW.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 200px;
+
+}
+.textHobbies{
+    text-align: center;
+    font-size: 200px;
+    font-family:'Lato', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 10px;
+    color: white;
+    text-shadow: black 5px 3px 2px;
+
+}
+.descriptionPage{
+    display: flex;
+    width: 80%;
+    padding: 30px;
+    background-color: #150734;
+    margin: auto;
+    transform: translate(0, -50px);
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.buttonHobbies{
+    background-color: #070311;
+    height: 300px;
+    width: 400px;
+    transform: skew(-10deg);
+    border: none;
+    color: white;
+}
+.bottomTextHobbies{
+    font-family:'Lato', sans-serif;
+    font-size: 20px;
+    transform: skew(10deg);
+    padding-top: 10px;
+}
+
+.steamBanner{
+    transform: skew(-10deg) translate(-50px,0);
+    background: #171a21;
+
+    width: 50%;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    padding: 30px;
+    font-size: 300px;
+    text-align: center;
+    font-family:'Lato', sans-serif;
+
+}
+.scrollmenu {
+    background-color: #171a21;
+    overflow: auto;
+    white-space: nowrap;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    
+  }
+
+.cardSteam{
+    background: #1b2838 ;
+    height: 300px;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 30px;
+    box-shadow: 10px 15px 20px 4px black;
+}
+.scrollmenu .cardSteam{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+  
+.scrollmenu .cardSteam:hover {
+    background-color: #777;
+  }
