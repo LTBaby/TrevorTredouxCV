@@ -1,0 +1,307 @@
+*{
+  padding: 0;
+  
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+header{
+  width: 110%;
+  height: 50px;
+  background-size: auto;
+  background-attachment: fixed;
+  position: fixed;
+  overflow: hidden;
+  border-radius: 0 0 0 0;
+  z-index: 2;
+  margin-bottom: 60px;
+
+}
+
+header .headOver{
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  color: whitesmoke;
+  background: linear-gradient( 145deg, #3778c2   30%,#32064A 60% );
+}
+
+
+
+.textHobbies{
+  text-align: center;
+  font-size: 200px;
+  font-family:'Lato', sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 10px;
+  color: white;
+  text-shadow: black 5px 3px 2px;
+  text-transform: capitalize;
+
+}
+@media screen and (min-width: 1801px) {
+  div.textHobbies {
+    font-size: 200px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  div.textHobbies {
+    font-size: 45px;
+  }
+}
+
+
+
+
+.buttonHobbies{
+  background-color: #070311;
+  height: 20%;
+  width: 90%;
+  transform: skew(-10deg);
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.bottomTextHobbies{
+  font-family:'Lato', sans-serif;
+  font-size: 20px;
+  transform: skew(10deg);
+  padding-top: 10px;
+}
+body{
+  background-color: black;
+  scroll-padding-top: 50px;
+
+}
+
+
+div{
+  box-sizing:border-box;
+}
+.squares{
+  padding:0px 0 0 0;
+}
+.squares >div:hover{
+  background-color: #FF0000;
+}
+.horizontal-scroll-wrapper{
+  background-color: #282828;
+  position: relative;
+  overflow: auto;
+  display:block;
+  overflow-y:auto;
+  overflow-x:hidden;
+  top:0;
+  left:0;
+  width:500px;
+  margin-left: -500px;
+  margin-bottom: 0;
+  max-height:1920px;
+
+
+  transform:rotate(-90deg) ;
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{
+
+
+  transform:rotate(90deg)translate(450px,-85px);
+  transform-origin: right top;
+}
+.squares > div{
+  background: white;
+  color: black;
+  width: 400px;
+  height: 480px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 35px;
+  box-shadow: 10px 15px 20px 4px black;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+
+.headBGHobbies{
+  width: 100%;
+  height: 580px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+
+}
+
+.descriptionPage{
+  display: flex;
+  width: 80%;
+  padding: 30px;
+  background-color: #150734;
+  margin: auto;
+  transform: translate(0, -90px);
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bottomText{
+  background: url(img/yt.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 80%;
+  transform: skew(20deg);margin: 0 0 0 40px;
+  text-align: center;
+  background-position: center;
+}
+
+.youtubeBanner{
+
+
+  margin: 0 0 0 -40px;
+  transform: skew(-20deg);
+
+  background: linear-gradient( 200deg, #32064A 30%, #150734 100% );
+  width: 60%;
+  
+  display: flex;
+  color: white;
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  padding: 30px;
+  font-size: 100px;
+  text-align: center;
+  font-family:'Lato', sans-serif;
+}
+.scrollmenu {
+  background-color: #282828;
+  overflow-x: inherit;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 1920px;
+
+
+}
+
+.cardYT{
+  background: white;
+  color: black;
+  width: 400px;
+  height: 480px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  box-shadow: 6px 6px 6px black;
+}
+
+.scrollmenu .cardYT{
+  display: inline-table;
+  color: black;
+  border-radius: 35px;
+  text-decoration: none;
+}
+
+.scrollmenu .cardYT:hover {
+  background-color: #FF0000;
+}
+
+.thumbImg{
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 30px 30px 0 0;
+}
+.textdescContainer{   
+  height: 50%; 
+  background-color: white;
+}
+.YTtitle{
+  white-space: normal;
+
+
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+
+  text-align: justify;
+
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
+.YTdesc{
+  white-space: normal;
+  border-radius: 30px;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+
+  
+
+}
+.playlistContainer{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.playlistGuide{
+  background-color: darkslateblue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  align-items: center;
+  border-radius: 30px 0 0 30px;
+  width: 30px;
+  height: 100px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+  visibility: hidden;
+}
+
+/* Track */
+::-webkit-scrollbar-track:horizontal {
+
+  border-radius: 1px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal{
+  background: red; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover:horizontal {
+  background: #b30000; 
+}

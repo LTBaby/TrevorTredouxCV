@@ -28,7 +28,7 @@ header{
 header .headOver{
     width: 100%;
     height: 100%;
-    padding: 5px;
+
     color: whitesmoke;
     background: linear-gradient( 145deg, #3778c2   30%,#32064A 60% );
 }
@@ -39,7 +39,7 @@ header .headOver{
     display: inline-block;
     cursor: pointer;
     border-radius: 20% 20% 20% 20%;
-    padding: 2px;
+    margin: 5px;
     z-index: 1;
 
 }
@@ -75,8 +75,30 @@ header .headOver{
 
 }
 
+/*HearedNav*/
+.headnav{
+    float: right;
+    background-color: #0f0f0f;
+    z-index: 3;
 
-/*This is the sidebarMenu where it is a quick link to important information to guide you to like my contact details*/
+    height: 110%;
+}
+
+.headnav a{
+    float: left;
+    color: white;
+    background-color: #32064A;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;z-index: 3;
+}
+.headnav :hover{
+    background-color: #150734 ;
+
+}
+/*This is the sidebarMenu where it is a quick guide to important information*/
 .sidebar .tooltipright::after {
     content: " ";
     position: absolute;
@@ -144,7 +166,7 @@ header .headOver{
     z-index: 1;
     top: -200px;
     left: -250px;
-    overflow-x: hidden; /* Disable horizontal scroll */
+    overflow: hidden;
     padding: 250px;
     transition: all 500ms ease-in-out;
     vertical-align: center;
@@ -170,6 +192,8 @@ header .headOver{
     transition: all 200ms ease-in-out;
 }
 
+
+/*This posiyion the circle links to a specific spot on the sidebar<How to test: trail by error>*/
 .sidebar a:nth-child(1){
     transform: translate3d(170px,5px,0)
 }.sidebar a:nth-child(2){
@@ -183,11 +207,6 @@ header .headOver{
 .sideNavAnim{
     transform:   scale3d(1,1,1);
     opacity: 100;
-    
-  }
-.sideNavAnim1{ 
-    transform: translate(-100%, 0);
-    
 }
 .sidebarItems li{
     transition: all 500ms ease-in-out;
@@ -275,7 +294,9 @@ header .headOver{
     background: linear-gradient( 200deg, #3778c2   30%,#32064A 100% );
     box-shadow: 10px 10px 8px 4px  black;  
 }.programcontainer {
-    width:400px; height: 250px; background-color: white;overflow: hidden;
+    width:400px; height: 250px; 
+    background-color: white;
+    overflow: hidden;
     border-radius: 0 5% 5% 0;
     box-shadow: 10px 10px 8px 4px black;
    
@@ -324,12 +345,13 @@ header .headOver{
 }
 .containRight{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     padding: 20px;
 }
 .containLeft{
     display: flex;
-    justify-content: left;
+
+    justify-content: flex-start;
     padding: 20px;
 }
 .headtextContainer{
@@ -510,9 +532,9 @@ header .headOver{
     text-decoration: none;
 }
   
-.fa:hover {
+/*.fa:hover {
     
-}
+}*/
 
 .fa-facebook {
     background: #3B5998;
@@ -572,100 +594,4 @@ header .headOver{
     border: black solid 2px;
     
 }
- 
 
-/*---------------------------------------------------------------------Styles for the Hobbies Page-------------------------------------------------------------------*/
-.headBGHobbies{
-    width: 100%;
-    height: 500px;
-    background: url("img/OW.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 200px;
-
-}
-.textHobbies{
-    text-align: center;
-    font-size: 200px;
-    font-family:'Lato', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    letter-spacing: 10px;
-    color: white;
-    text-shadow: black 5px 3px 2px;
-
-}
-.descriptionPage{
-    display: flex;
-    width: 80%;
-    padding: 30px;
-    background-color: #150734;
-    margin: auto;
-    transform: translate(0, -50px);
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.buttonHobbies{
-    background-color: #070311;
-    height: 300px;
-    width: 400px;
-    transform: skew(-10deg);
-    border: none;
-    color: white;
-}
-.bottomTextHobbies{
-    font-family:'Lato', sans-serif;
-    font-size: 20px;
-    transform: skew(10deg);
-    padding-top: 10px;
-}
-
-.steamBanner{
-    transform: skew(-10deg) translate(-50px,0);
-    background: #171a21;
-
-    width: 50%;
-    color: white;
-    display: flex;
-    justify-content: left;
-    align-content: center;
-    padding: 30px;
-    font-size: 300px;
-    text-align: center;
-    font-family:'Lato', sans-serif;
-
-}
-.scrollmenu {
-    background-color: #171a21;
-    overflow: auto;
-    white-space: nowrap;
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-    padding: 10px;
-    border-radius: 30px;
-    
-  }
-
-.cardSteam{
-    background: #1b2838 ;
-    height: 300px;
-    width: 400px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 30px;
-    box-shadow: 10px 15px 20px 4px black;
-}
-.scrollmenu .cardSteam{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;
-  }
-  
-.scrollmenu .cardSteam:hover {
-    background-color: #777;
-  }

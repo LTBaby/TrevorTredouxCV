@@ -4,4 +4,3 @@ function menuDisplay(theHamburger) {
     element.classList.toggle("sideNavAnim");
     //document.getElementById("sidebarnav").style.width = "0px";
   }
- 
