@@ -30,7 +30,7 @@ header .headOver{
     height: 100%;
 
     color: whitesmoke;
-    background: linear-gradient( 145deg, #3778c2   30%,#b74df1 60% );
+    background: linear-gradient( 145deg, #3778c2   30%,#32064A 60% );
 }
 
 
@@ -87,7 +87,7 @@ header .headOver{
 .headnav a{
     float: left;
     color: white;
-    background-color: #b74df1;
+    background-color: #32064A;
     text-align: center;
     padding: 14px 16px;
     font-size: 18px;
@@ -107,13 +107,13 @@ header .headOver{
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent transparent black;
+    border-color: transparent transparent transparent #0f0f0f;
   } 
 
   .sidebar .tooltipright {
     visibility: hidden;
     width: 120px;
-    background-color: black;
+    background-color: #0f0f0f;
     color: #fff;
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -132,7 +132,7 @@ header .headOver{
   .sidebar .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: black;
+    background-color: #0f0f0f;
     color: #fff;
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -155,7 +155,7 @@ header .headOver{
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: #0f0f0f transparent transparent transparent;
   }
   .sidebar a:hover .tooltiptext {
     visibility: visible;
@@ -171,7 +171,7 @@ header .headOver{
     padding: 250px;
     transition: all 500ms ease-in-out;
     vertical-align: center;
-    background: linear-gradient( 200deg, #3778c2   30%,#b74df1 100% );
+    background: linear-gradient( 200deg, #32064A 30%, #150734 100% );
     border-radius: 50%;/*topleft, .,.,bottomleft*/
     transform: rotate(-90deg);
     
@@ -185,7 +185,7 @@ header .headOver{
     font-size: 25px;
     color: white;
     display: block;
-    background-color: #0f2557;
+    background-color: #0f0f0f;
     border-radius: 100%;
 
     height: 60px;
@@ -217,7 +217,7 @@ header .headOver{
 }
 
 .sidebar a:hover {
-    background-color: #28559a;
+    background-color: #3B5998;
 }
 
 /*The End of Sidebar style....................................................................................................................................................*/ 
@@ -293,13 +293,13 @@ header .headOver{
     height: 250px;
     width: 400px;
     background: linear-gradient( 200deg, #3778c2   30%,#32064A 100% );
-    box-shadow: 10px 10px 8px 4px  black;  
+    box-shadow: 7px 6px 10px 2px black;  
 }.programcontainer {
     width:400px; height: 250px; 
     background-color: white;
     overflow: hidden;
     border-radius: 0 5% 5% 0;
-    box-shadow: 10px 10px 8px 4px black;
+    box-shadow: 7px 6px 10px 2px black;
    
 }
 .captop{
@@ -428,7 +428,7 @@ header .headOver{
 
     border-radius: 20px;
 
-    box-shadow: 10px 15px 20px 4px black;
+    box-shadow: 7px 6px 10px 2px black; 
 }
 .edubotContent{
 
