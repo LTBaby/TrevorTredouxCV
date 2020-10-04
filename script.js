@@ -7,11 +7,11 @@ function menuDisplay(theHamburger) {
 
 function scrolltoLeft(parm) {
   var elmnt = document.getElementById(parm);
-  elmnt.scrollLeft -= 420;
+  elmnt.scrollLeft -= 320;
   
 }function scrolltoRight(parm) {
   var elmnt = document.getElementById(parm);
-  elmnt.scrollLeft += 420;
+  elmnt.scrollLeft += 320;
   
 }
 function mouseUp() {
@@ -20,8 +20,8 @@ function mouseUp() {
 
 $(function(){
   $('#playlistDub').ready(function() {
-      var key = 'AIzaSyDTaX5O2xE9lrw1KaCe1BAUGtqaBFpkgDM';
-      var playlistId = 'PLPogFqzUrNuHP4o7x2UdPv42lO76teYOK';
+      var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
+      var playlistId = 'PLvcSNZqNYJCnnIUOZlVBIiV8oqnQfjc6c';
       var currentVid = ''
       loadplaylist();
   
@@ -34,7 +34,7 @@ $(function(){
                   playlistId: playlistId
               },function getPlaylist(data) {
   
-                  console.log(data);
+                 
   
                   $.each(data.items, function(i, item) {
                       var output = outputYT(item,playlistId);
@@ -63,10 +63,8 @@ $(function(){
 });
 
 $(document).ready(function () {
-
-
-  var key = 'AIzaSyDTaX5O2xE9lrw1KaCe1BAUGtqaBFpkgDM';
-  var playlistId = 'PLw-VjHDlEOgsIgak3vJ7mrcy-OscZ6OAs';
+  var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
+  var playlistId = 'PLVVXrfoNMmK5KVBcgi4ylYev_cshYuZA0';
   var currentVid = ''
   loadplaylist();
 
@@ -79,7 +77,7 @@ $(document).ready(function () {
               playlistId: playlistId
           },function getPlaylist(data) {
 
-              console.log(data);
+              
 
               $.each(data.items, function(i, item) {
                   var output = outputYT(item,playlistId);
@@ -107,37 +105,34 @@ $(document).ready(function () {
 
 });
 
-
+//NASA
 document.addEventListener("DOMContentLoaded", function(){
   sendApiRequest()
+  weatherRequest()
 })
-//An asynchronous function to fetch data from the API.
+
 async function sendApiRequest(){
-    let apiKEY = "IctxZaQRuKITCYGgNzcVWNVrtBJyp80KCpuV0aJv"
+  let apiKEY = "IctxZaQRuKITCYGgNzcVWNVrtBJyp80KCpuV0aJv"
   let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2500&camera=fhaz&api_key=${apiKEY}`);
+  let data = await response.json()
+  useApiData(data)
+
+}
+
+function useApiData(data){
+  document.querySelector("#thebackground").innerHTML = `<img class="headBGHobbies" src="${data.photos[1].img_src}" >`
+}
+
+//OpenWeatherMap
+function displayWeather(data){
+  document.querySelector("#container").innerHTML = `<div class="card">${data.main.temp} </div>`
+}
+
+async function weatherRequest(){
+  let apiKEY = "1bd62e349916f98f6d44509d4e32c4e1"
+  let place = "Vanderbijlpark"
+  let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${apiKEY}`);
   console.log(response)
   let data = await response.json()
-  console.log(data)
-  useApiData(data)
-  console.log(data.photos)
-}
-
-//function that does something with the data received from the API. The name of the function should be customized to whatever you are doing with the data
-function useApiData(data){
-
-      document.querySelector("#thebackground").innerHTML = `<img class="headBGHobbies" src="${data.photos[1].img_src}" >`
-
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-  fetch("http://api.openweathermap.org/data/2.5/weather?q=London&appid=1bd62e349916f98f6d44509d4e32c4e1")
-  .then(response => response.json())
-  .then(data => console.log(data))
-})
-
-//function that does something with the data received from the API. The name of the function should be customized to whatever you are doing with the data
-function useApiData(data){
-
-      document.querySelector("#thebackground").innerHTML = `<img class="headBGHobbies" src="${data.photos[1].img_src}" >`
-
+  displayWeather(data)
 }

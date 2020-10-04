@@ -30,7 +30,7 @@ header .headOver{
     height: 100%;
 
     color: whitesmoke;
-    background: linear-gradient( 145deg, #3778c2   30%,#32064A 60% );
+    background: linear-gradient( 145deg, #3778c2   30%,#b74df1 60% );
 }
 
 
@@ -87,7 +87,7 @@ header .headOver{
 .headnav a{
     float: left;
     color: white;
-    background-color: #32064A;
+    background-color: #b74df1;
     text-align: center;
     padding: 14px 16px;
     font-size: 18px;
@@ -144,6 +144,7 @@ header .headOver{
     z-index: 2;
     top: -30px;
     left: -50%;
+
   }
   
   .sidebar .tooltiptext::after {
@@ -170,7 +171,7 @@ header .headOver{
     padding: 250px;
     transition: all 500ms ease-in-out;
     vertical-align: center;
-    background: linear-gradient( 200deg, #3778c2   30%,#32064A 100% );
+    background: linear-gradient( 200deg, #3778c2   30%,#b74df1 100% );
     border-radius: 50%;/*topleft, .,.,bottomleft*/
     transform: rotate(-90deg);
     
@@ -390,7 +391,7 @@ header .headOver{
     text-align: justify;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     padding: 5px;
 
 }
@@ -454,71 +455,7 @@ header .headOver{
  /*THE END Education details........................................................................................................................................................................*/
 
 
-/*get in Contact*/ 
-.getContact{
-    display: inline-flex;
-    flex-basis: auto;
 
-    flex-wrap: wrap;
-
-    width: 100%;
-    height: 400px;
-    padding-top: 0%;
-
-}.photoArea{
-    height: 100%;
-    width: 15%;
-    background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
-    transform: skew(-20deg) translate(-100px,0);
-
-    animation: pulse2 20s infinite;
-
-}.detailArea{
-    height: 100%;
-    width: 20%;
-
-}.contactAnimation{
-    height: 100%;
-    width: 65%;
-
-    overflow: hidden;
-}.shape{
-    transform: skew(-20deg);
-    width: 100%;
-    height: 100%;
-    animation: pulse 20s infinite;
-    background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
-    transform: skew(-20deg) translate(100px,0) scale(1);
-
-}
-/*@keyframes pulse {
-    0% {
-        background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
-        transform: skew(-20deg) translate(100px,0);
-      }
-      50%{
-        background: linear-gradient( 80deg, #150734 10%, #32064A 100% );
-        transform: skew(20deg) translate(100px,0) scale(1);
-      }
-      100% {
-        background: linear-gradient( 100deg, #150734 10%, #32064A 100% );
-        transform: skew(-20deg) translate(100px,0);
-      }
-}@keyframes pulse2 {
-    0% {
-        background: linear-gradient( 90deg, #150734 10%, #32064A 100% );
-        transform: skew(-20deg) translate(-100px,0);
-      }
-      50%{
-        background: linear-gradient( 80deg, #150734 10%, #32064A 100% );
-        transform: skew(20deg) translate(-100px,0) scale(1);
-      }
-      100% {
-        background: linear-gradient( 100deg, #150734 10%, #32064A 100% );
-        transform: skew(-20deg) translate(-100px,0);
-      }
-}*/
-/*THE END get in Contact.........................................................................................................................................................................*/
 
 
 
@@ -566,26 +503,26 @@ header .headOver{
     
     
 }.containerPD{
-    width: 550px;
-    height: 300px;
-    border-radius: 2px;
+    width: 530px;
+    
+    border-radius: 30px;
     background: #150734;
-    
-    
+    border: white solid 1px;
+    opacity: 98%;
 
 }.textDetails{
-   
+    
     width: 100%;
 
 }
 .detailShape{
-    width: 580px;
-    height: 330px;
+    width: 100%;
 
-    background: linear-gradient( 200deg, #32064A 30%, #150734 100% );
+
+    background: transparent;
     display: flex;
     
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: flex-end;
 
 
