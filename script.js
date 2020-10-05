@@ -7,11 +7,11 @@ function menuDisplay(theHamburger) {
 
 function scrolltoLeft(parm) {
   var elmnt = document.getElementById(parm);
-  elmnt.scrollLeft -= 320;
+  elmnt.scrollLeft -= 274;
   
 }function scrolltoRight(parm) {
   var elmnt = document.getElementById(parm);
-  elmnt.scrollLeft += 320;
+  elmnt.scrollLeft += 274;
   
 }
 function mouseUp() {
@@ -35,7 +35,7 @@ $(document).ready(function () {
           },function getPlaylist(data) {
 
               
-
+                console.log(data);
               $.each(data.items, function(i, item) {
                   var output = outputYT(item,idPlaylist);
                   $(containers[j]).append(output);
