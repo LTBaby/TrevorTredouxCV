@@ -216,7 +216,7 @@ html{
   color: black;
   border-radius: 35px;
   text-decoration: none;
-  background-color: transparent;
+
 }
 
 .thumbImg:hover {
@@ -238,7 +238,7 @@ html{
 
 
   font-family: 'Lato', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 
   text-align: justify;
@@ -252,7 +252,7 @@ html{
   border-radius: 30px;
 
   font-family: 'Lato', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 300;
 
   text-align: left;
@@ -273,15 +273,15 @@ html{
   background-color: #b74df1;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 5px 15px;
   text-align: left;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 12px;
   align-items: center;
   border-radius: 30px 0 0 30px;
-  width: 30px;
-  height: 100px;
+  width: 20px;
+  height: 60px;
 }
 ::-webkit-scrollbar {
   width: 1px;
@@ -337,7 +337,7 @@ html{
 }
 .bikeContainer{
   display: block;
-  width: 430px;
+  width: 390px;
   justify-content: space-around;
   background-color: white;
   margin-left: auto;

@@ -18,82 +18,40 @@ function mouseUp() {
   document.getElementById("playlistscroll").innerHTML = "You released the mouse button.";
 }
 
-$(function(){
-  $('#playlistDub').ready(function() {
-      var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
-      var playlistId = 'PLvcSNZqNYJCnnIUOZlVBIiV8oqnQfjc6c';
-      var currentVid = ''
-      loadplaylist();
-  
-      function loadplaylist() {
-          $.get(
-              "https://www.googleapis.com/youtube/v3/playlistItems", {
-                  part: 'snippet',
-                  key: key,
-                  maxResults: 20,
-                  playlistId: playlistId
-              },function getPlaylist(data) {
-  
-                 
-  
-                  $.each(data.items, function(i, item) {
-                      var output = outputYT(item,playlistId);
-                      $('#playlistYTDub').append(output);
-                      
-                  });
-              });
-      }       
-  
-      function outputYT(item,listID){
-          var thumbnail = item.snippet.thumbnails.medium.url;
-          var title = item.snippet.title;
-          var description = item.snippet.description.substring(0, 200);
-          var video = item.snippet.resourceId.videoId;
-          console.log(listID)
-          var ytOutput = '<div class="cardYT" ><a href="https://youtube.com/watch?v=' + video + '&list=' + listID+ '"><img  class="thumbImg" src=" ' + thumbnail + '"></a>'+ 
-                              '<div class="textdescContainer">'+
-                                  '<div class="YTtitle"> <a href="https://youtube.com/watch?v=' + video + '&list=' + listID+ '">' + title + '</a> </div>'+
-                                  '<div class="YTdesc" id="Overflow">' + description  + '</div>' +
-                              '</div>'+ 
-                          '</div>';
-                          
-          return ytOutput;
-      }
-  });
-});
-
 $(document).ready(function () {
   var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
-  var playlistId = 'PLVVXrfoNMmK5KVBcgi4ylYev_cshYuZA0';
-  var currentVid = ''
+  var playlist = ['PLvcSNZqNYJCnnIUOZlVBIiV8oqnQfjc6c','PLVVXrfoNMmK5KVBcgi4ylYev_cshYuZA0'];
+  var containers = ['#playlistYTDub','#playlistYT'];
   loadplaylist();
 
   function loadplaylist() {
+    $.each(playlist, function(j,idPlaylist){
       $.get(
           "https://www.googleapis.com/youtube/v3/playlistItems", {
               part: 'snippet',
               key: key,
               maxResults: 20,
-              playlistId: playlistId
+              playlistId: idPlaylist
           },function getPlaylist(data) {
 
               
 
               $.each(data.items, function(i, item) {
-                  var output = outputYT(item,playlistId);
-                  $('#playlistYT').append(output);
+                  var output = outputYT(item,idPlaylist);
+                  $(containers[j]).append(output);
                   
               });
           });
+      });
   }       
 
   function outputYT(item,listID){
       var thumbnail = item.snippet.thumbnails.medium.url;
-      var title = item.snippet.title;
-      var description = item.snippet.description.substring(0, 200);
+      var title = item.snippet.title.substring(0, 30);
+      var description = item.snippet.description.substring(0, 100);
       var video = item.snippet.resourceId.videoId;
 
-      var ytOutput = '<div class="cardYT" ><a href="https://youtube.com/watch?v=' + video + '&list=' + listID+ '"><img  class="thumbImg" src=" ' + thumbnail + '"></a>'+ 
+      var ytOutput = '<div class="cardYT" ><img  class="thumbImg" src=" ' + thumbnail + '">'+ 
                           '<div class="textdescContainer">'+
                               '<div class="YTtitle"> <a href="https://youtube.com/watch?v=' + video + '&list=' + listID+ '">' + title + '</a> </div>'+
                               '<div class="YTdesc" id="Overflow">' + description  + '...</div>' +
