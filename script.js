@@ -83,9 +83,14 @@ function useApiData(data){
 
 //OpenWeatherMap
 function displayWeather(data){
-  document.querySelector("#card").innerHTML = `<div class=YTdesc>${data.name}</div><div class=YTtitle>Temperature for today:</div><div class="tempText">${Math.round(data.main.temp)}°C</div>
-                                                <div class=YTtitle>Wind speed:</div><div class="tempText">${Math.round(data.wind.speed)} m/s</div>
-                                                <div class="tempText">${data.weather[0].main}</div>`
+  let clouds = data.weather[0].main
+  console.log(clouds)
+  if (clouds == "Clouds"){
+    document.querySelector("#card").innerHTML = `<div  style="display:flex;justify-content: space-around;background:black;color:white;border-radius: 30px 30px 0 0;font-family: 'Lato', sans-serif;
+    font-size: 30px;align-items: center;"><img  src="http://openweathermap.org/img/wn/04d@2x.png" alt=""> Clouds</div>`
+  }
+  document.querySelector("#card").innerHTML += `<div class=YTdesc>${data.name}</div><div class=YTtitle>Temperature for today:</div><div class="tempText">${Math.round(data.main.temp)}°C</div>
+                                                <div class=YTtitle>Wind speed:</div><div class="tempText">${Math.round(data.wind.speed)} m/s</div>`
 }
 
 async function weatherRequest(){
