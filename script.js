@@ -19,7 +19,7 @@ function mouseUp() {
 }
 
 $(document).ready(function () {
-  var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
+  var key = 'AIzaSyDTaX5O2xE9lrw1KaCe1BAUGtqaBFpkgDM';
   var playlist = ['PLvcSNZqNYJCnnIUOZlVBIiV8oqnQfjc6c','PLVVXrfoNMmK5KVBcgi4ylYev_cshYuZA0'];
   var containers = ['#playlistYTDub','#playlistYT'];
   loadplaylist();
@@ -83,14 +83,17 @@ function useApiData(data){
 
 //OpenWeatherMap
 function displayWeather(data){
-  document.querySelector("#container").innerHTML = `<div class="card">${data.main.temp} </div>`
+  document.querySelector("#card").innerHTML = `<div class=YTdesc>${data.name}</div><div class=YTtitle>Temperature for today:</div><div class="tempText">${Math.round(data.main.temp)}°C</div>
+                                                <div class=YTtitle>Wind speed:</div><div class="tempText">${Math.round(data.wind.speed)} m/s</div>
+                                                <div class="tempText">${data.weather[0].main}</div>`
 }
 
 async function weatherRequest(){
   let apiKEY = "1bd62e349916f98f6d44509d4e32c4e1"
   let place = "Vanderbijlpark"
-  let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&appid=${apiKEY}`);
-  console.log(response)
+  let response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${place}&units=metric&appid=${apiKEY}`);
+  
   let data = await response.json()
+  console.log(data)
   displayWeather(data)
 }
