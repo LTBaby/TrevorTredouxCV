@@ -84,11 +84,21 @@ function useApiData(data){
 //OpenWeatherMap
 function displayWeather(data){
   let clouds = data.weather[0].main
+  var weatherConditions = ["Thunderstorm","Drizzle","Rain","Snow","Atmosphere","Clear","Clouds"]
+  var weatherIcons = ["http://openweathermap.org/img/wn/11d@2x.png","http://openweathermap.org/img/wn/09d@2x.png","http://openweathermap.org/img/wn/10d@2x.png","http://openweathermap.org/img/wn/13d@2x.png","http://openweathermap.org/img/wn/50d@2x.png","http://openweathermap.org/img/wn/01d@2x.png","http://openweathermap.org/img/wn/04d@2x.png"]
+  
   console.log(clouds)
-  if (clouds == "Clouds"){
-    document.querySelector("#card").innerHTML = `<div  style="display:flex;justify-content: space-around;background:black;color:white;border-radius: 30px 30px 0 0;font-family: 'Lato', sans-serif;
-    font-size: 30px;align-items: center;"><img  src="http://openweathermap.org/img/wn/04d@2x.png" alt=""> Clouds</div>`
-  }
+  var i = 0
+  weatherConditions.forEach(element => {
+    
+    if (clouds == element){
+        var icon = weatherIcons[i];
+        document.querySelector("#card").innerHTML = `<div  class="enthusiastContainer"><img  src=${icon} alt=""> ${element}</div>`
+        console.log(icon)
+        console.log(element)
+    }
+    i++
+  });
   document.querySelector("#card").innerHTML += `<div class=YTdesc>${data.name}</div><div class=YTtitle>Temperature for today:</div><div class="tempText">${Math.round(data.main.temp)}°C</div>
                                                 <div class=YTtitle>Wind speed:</div><div class="tempText">${Math.round(data.wind.speed)} m/s</div>`
 }
