@@ -19,8 +19,8 @@ function mouseUp() {
 }
 
 $(document).ready(function () {
-  var key = 'AIzaSyDTaX5O2xE9lrw1KaCe1BAUGtqaBFpkgDM';
-  var playlist = ['PLvcSNZqNYJCnnIUOZlVBIiV8oqnQfjc6c','PLVVXrfoNMmK5KVBcgi4ylYev_cshYuZA0'];
+  var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
+  var playlist = ['PLVVXrfoNMmK7f-EhC013CX7zTbYr3BeRV','PLVVXrfoNMmK7f-EhC013CX7zTbYr3BeRV'];
   var containers = ['#playlistYTDub','#playlistYT'];
   loadplaylist();
 
