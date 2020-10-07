@@ -253,7 +253,7 @@ header .headOver{
 @media screen and (min-width: 1801px) {
     div.shapeText {
         margin-left: 200px;
-        width: 430px;
+        width: 530px;
         height: 550px;
     }
   }
@@ -275,7 +275,8 @@ header .headOver{
   
   @media screen and (max-width: 1800px) {
     div.imageProfile {
-        padding: 50px;
+        padding: 10px;
+        padding-top: 50px;
 
     }
   }
