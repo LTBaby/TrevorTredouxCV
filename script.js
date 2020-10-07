@@ -20,7 +20,7 @@ function mouseUp() {
 
 $(document).ready(function () {
   var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
-  var playlist = ['PLVVXrfoNMmK7f-EhC013CX7zTbYr3BeRV','PLVVXrfoNMmK7f-EhC013CX7zTbYr3BeRV'];
+  var playlist = ['PL8mG-RkN2uTyuEutQa79RZ0Q5u5gteUci','PLVVXrfoNMmK7f-EhC013CX7zTbYr3BeRV'];
   var containers = ['#playlistYTDub','#playlistYT'];
   loadplaylist();
 
