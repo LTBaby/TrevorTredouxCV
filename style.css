@@ -57,7 +57,6 @@ header .headOver{
     outline-width: 2px;
 }
 .pattyRotate .patty1{
-    
     transform: translate(0,10px)rotate(-45deg);
 }.pattyRotate .patty3{
     transform: translate(0,-10px)rotate(45deg);

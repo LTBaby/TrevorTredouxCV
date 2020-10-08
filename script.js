@@ -19,7 +19,7 @@ function mouseUp() {
 }
 
 $(document).ready(function () {
-  var key = 'AIzaSyCsziM4Y7SGpRD9T1QTw7Ase0c-z8XvPuc';
+  var key = 'AIzaSyDTaX5O2xE9lrw1KaCe1BAUGtqaBFpkgDM';
   var playlist = ['PL8mG-RkN2uTyuEutQa79RZ0Q5u5gteUci','PLVVXrfoNMmK7f-EhC013CX7zTbYr3BeRV'];
   var containers = ['#playlistYTDub','#playlistYT'];
   loadplaylist();
@@ -51,7 +51,7 @@ $(document).ready(function () {
       var description = item.snippet.description.substring(0, 100);
       var video = item.snippet.resourceId.videoId;
 
-      var ytOutput = '<div class="cardYT" ><img  class="thumbImg" src=" ' + thumbnail + '">'+ 
+      var ytOutput = '<div class="cardYT" > <a  href="https://youtube.com/watch?v=' + video + '&list=' + listID+ '"><img  class="thumbImg" src=" ' + thumbnail + '"></a>'+ 
                           '<div class="textdescContainer">'+
                               '<div class="YTtitle"> <a href="https://youtube.com/watch?v=' + video + '&list=' + listID+ '">' + title + '</a> </div>'+
                               '<div class="YTdesc" id="Overflow">' + description  + '...</div>' +
